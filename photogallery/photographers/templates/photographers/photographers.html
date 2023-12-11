@@ -1,0 +1,16 @@
+{% extends "main.html" %} 
+{% block body %}
+
+
+<h4>the photographers list</h4>
+
+<div class="container" md-5 >
+  {% for photographer in photographers %}
+    <p>{{photographer.id}}  <a href="{% url 'photographer' photographer.id %}">{{photographer}} ({{photographer.bio}})</p>
+  {% endfor %}
+
+</div> 
+
+
+
+{% endblock  %}

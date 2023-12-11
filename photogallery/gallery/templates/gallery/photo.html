@@ -1,0 +1,21 @@
+{% extends "main.html" %} 
+
+{% block body %}
+
+<table border= "1">
+
+    
+  
+    <div class = "profile-container" md-5 style= "max-width: 300px">
+        <img src="{{ photo.image.url }}" style= "max-width: 300px">
+        <div class="profile-details" >
+            <h5>Name: {{ photo.name }}</h5>
+            <p >Description: {{ photo.description }}</p>
+            <p>Location: {{ photo.location }}</p>
+        </div>
+    </div>
+
+
+</table>
+
+{% endblock %}

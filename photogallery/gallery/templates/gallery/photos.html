@@ -1,0 +1,35 @@
+{% extends "main.html" %} 
+{% block body %}
+
+
+
+<table border= "1">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Created</th>
+        <th>  </th>
+        <th> </th>
+        <th> </th>
+
+    </tr>
+    {% for photo in photos %}
+    <tr>
+        <td>{{photo.id}}</td>
+        <td>{{photo.name}}</td>
+        <td>{{photo.description|slice:"55"}}</td>
+        <td>{{photo.location}}</td>
+        <td>{{photo.created}}</td>
+
+        <td><a href="{% url 'photo' photo.id %}">view</td>
+        <td><a href="{% url 'update-photo' photo.id %}">update</td>
+        <td><a href="{% url 'delete-photo' photo.id %}">delete</td>
+    </tr>
+
+{% endfor %}
+</table>
+
+{% endblock %}

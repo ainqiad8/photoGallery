@@ -1,0 +1,22 @@
+{% extends "main.html" %} 
+{% block body %}
+
+
+<div class="container" md-5 style="max-width:300px">
+    <img src="{{ photographer.profile_image.url }}" style="max-width:300px">
+    <div class="container details" >
+        <h5>Name: {{photographer.name}}</h5>
+        <p >Description: {{ photographer.description }}</p>
+        <p>Location: {{ photographer.location }}</p>
+        <p><a href="{% url 'device' %}">Captured_By </a></p>
+        
+        <a class="btn btn-secondary" href="{% url 'photographers' %}" type="button" >Back</a> 
+        
+    </div>
+</div>
+
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block body %}
+
+<div class="container" md-5>
+    <div class="container details" md-5>
+        <form action="{% url 'update' %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+    
+            <input type="submit">
+        </form>
+
+
+    </div>
+</div>
+  
+    
+
+
+
+{% endblock %}

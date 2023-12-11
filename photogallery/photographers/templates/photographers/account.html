@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block body %}
+
+<div class="container" md-5>
+    <div class="container details" md-5>
+        <img src="{{ photographer.profile_image.url }}"  style="max-width:300px">
+        <h5>Name: {{photographer.username}}</h5>
+        <p >Description: {{ photographer.description }}</p>
+        <p>Email: {{ photographer.email }}</p>
+        <p>Captured_By: {{ photographer.device }}</p>
+
+        <a class="btn btn-secondary" href="{% url 'update' %}" type="button" >update</a> 
+    
+    </div>
+</div>
+
+   
+
+{% endblock  %}

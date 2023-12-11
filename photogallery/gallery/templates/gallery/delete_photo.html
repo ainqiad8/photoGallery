@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block body %}
+
+    <form action="" method="POST">
+        {%csrf_token%}
+        <p>Are you sure, you want to delete the record???</p>
+        <a href="{% url 'photos' %}">GO BACK</a>
+        <input type='submit', value = "confirm" />
+    </form>
+{% endblock %}
